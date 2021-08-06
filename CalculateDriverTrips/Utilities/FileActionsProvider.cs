@@ -74,7 +74,7 @@ namespace CalculateDriverTrips.Utilities
                 ReportTrips.Add(reportDetail);
             }
 
-            return ReportTrips;
+            return ReportTrips.OrderByDescending(x => x.Miles).ToList();
 
         }
     }
